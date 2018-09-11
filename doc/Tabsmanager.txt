@@ -1,0 +1,78 @@
+*Tabsmanager.txt*      Tab management for Vim version |7.0|+
+
+Version 0.0.01
+===============================================================================
+CONTENTS
+|Tabsmanager_Introduction|
+|Tabsmanager_option|
+|Tabsmanager_default_mapping|
+===============================================================================
+*Tabsmanager_Introduction*
+
+The default of vim tabline is useless, this plugin improved that and
+make buffer visible.
+But I think the best way to control your buffers in vim, I suggestion 
+is that to use fuzzy-match.
+##How to install 
+Using some Plugin-manager, please add the line into your vimrc.
+`Plug 'hy172574895/Tabsmanager'`
+
+===============================================================================
+*Tabsmanager_option*
+    
+`let g:tabmanager_win_pos='bo'`
+    where to show Tabsmanager window, 'bo' is means right, 'to' is 
+    means left
+
+`let g:tabmanager_win_width='30'`
+    the size of Tabsmanager window.
+
+`g:tabmanager_doNot_show_tabs`
+    If this option is exists (not empty), then will not show the
+    tab context in Tabsmanager.
+
+`g:tabmanager_doNot_show_hidden_buffers`
+    If this option is exists (not empty),then will not show the 
+    hidden buffers context.
+
+`g:tabmanager_doNot_show_last_track`
+    If this option is exists (not empty),then will not show the 
+    track list.
+
+`g:tabmanager_show_tabwindow_when_open_new_tab=1`
+    If this option is exists (not empty),then will open a new 
+    tabmanager windows when open a new tab.
+===============================================================================
+*Tabsmanager_default_mapping*
+
+`tt`        
+    Open a Tabsmanager window when there is not. If there is, 
+    then point to Tbasmanager window. If cursor on Tabsmanager 
+    windows then back to last window.
+    you can change this mapping by setting g:tabmanager_mapping_tt
+
+`tg`
+    Jump to tabs, this function will let you type an exactly numbers
+    to jump.
+    you can change this mapping by setting g:tabmanager_mapping_tg
+
+'tb'
+    Control a buffer, this function will ask you to type twice, the
+    first one will confirm that the style to show buffer, the 
+    second one is the numbers of buffer that you want to control.
+    you can change this mapping by setting g:tabmanager_mapping_tb
+    
+    the following is the style of the first type:
+        't' Open buffer in new tab.
+        'b' Open buffer in curren buffer
+        's' Open buffer splitly
+        'v' Open buffer vertically
+
+The following mapping is only works when cursor on tabmanager window:
+
+'t' open curren buffer in a new tab.
+'o' open curren buffer in curren buffer.
+'s' split curren buffer in curren tab.
+'v' split curren buffer verically in curren tab.
+'p' point to the buffer.
+'d' delete buffer.
