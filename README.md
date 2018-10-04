@@ -12,4 +12,7 @@ Using some Plugin-manager, please add the line into your vimrc.
 `Plug 'hy172574895/Tabsmanager'`
 
 **more info see :h tabsmanager**
+  
+The right one where in the screenshot
+![Image text](https://github.com/hy172574895/Tabsmanager/blob/master/doc/sshot-1.png)
 
